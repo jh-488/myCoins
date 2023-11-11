@@ -2,6 +2,8 @@
 
 This is a react app that uses the [CoinGecko API](https://www.coingecko.com/api/documentation) to display the 10 top cryptos based on their marketcap and important data about each one.
 
+[DEMO](https://jh-488.github.io/mycoins/)
+
 # Getting started
 
 To get the app running locally:
@@ -14,4 +16,4 @@ To get the app running locally:
 
 * Home page with the top 10 coins
 * coin/:id page for information about each coin
-* Current price / Chart / and more...
+* Current price / Chart (using [react-chartjs-2](https://react-chartjs-2.js.org/)) / and more...
