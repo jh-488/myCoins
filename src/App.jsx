@@ -19,8 +19,8 @@ function App() {
       <div className="app" id={theme}>
         <Header theme={theme} toggleTheme={toggleTheme}/>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/coin/:coinId" element={<CoinInfo />} />
+          <Route path="/mycoins" element={<Home />} />
+          <Route path="/mycoins/coin/:coinId" element={<CoinInfo />} />
         </Routes>
         <Footer />
       </div>

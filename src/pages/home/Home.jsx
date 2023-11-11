@@ -41,7 +41,7 @@ const Home = () => {
           {coins.map((coin) => {
             return (
               <Link
-                to={`/coin/${coin.id}`}
+                to={`/mycoins/coin/${coin.id}`}
                 element={<CoinInfo />}
                 key={coin.id}
               >

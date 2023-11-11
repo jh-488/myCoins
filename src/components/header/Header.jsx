@@ -9,7 +9,7 @@ const Header = (props) => {
     <header>
       <div className="container heading">
         <div className="home">
-          <Link to="/">
+          <Link to="/mycoins">
             <FaHome className="icon" />
           </Link>
         </div>
