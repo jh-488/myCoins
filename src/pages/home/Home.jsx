@@ -8,8 +8,9 @@ import axios from "axios";
 const Home = () => {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [rows, setRows] = useState(10);
 
-  const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&locale=en";
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${rows}&page=1&sparkline=false&locale=en`;
 
   useEffect(() => {
     axios
@@ -21,7 +22,7 @@ const Home = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [rows]);
 
   return (
     <>
@@ -29,6 +30,22 @@ const Home = () => {
         <div className="loading"></div>
       ) : (
         <div className="container">
+          <div className="rows-select-wrapper">
+            <label htmlFor="rows-select">Rows:</label>
+            <select 
+              id="rows-select" 
+              className="rows-select"
+              value={rows}
+              onChange={(e) => setRows(e.target.value)}  
+            >
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+
           <div className="title grid6">
             <p>#</p>
             <p>Coin</p>

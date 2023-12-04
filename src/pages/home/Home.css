@@ -28,3 +28,36 @@ img {
     display: flex;
     align-items: center;
 }
+
+.rows-select-wrapper label {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+}
+
+#dark .rows-select-wrapper label {
+    color: #fff;
+}
+
+#light .rows-select-wrapper label {
+    color: #171717;
+}
+
+.rows-select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #E5E4E2;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#dark .rows-select {
+    background-color: #E5E4E2;
+}
+
+#light .rows-select {
+    color: #fff;
+    background-color: #0D1421;
+}
+
